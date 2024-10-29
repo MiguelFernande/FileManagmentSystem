@@ -38,7 +38,7 @@ This repository contains a Java-based **File Management System** developed as a 
    java FileManagementSystem
    ```
 
-This will launch the File Management System, allowing you to perform file operations and encrypt text files using the LFSR encryption function.
+   This will launch the File Management System, allowing you to perform file operations and encrypt text files using the LFSR encryption function.
 
 ## Credits
 
