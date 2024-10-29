@@ -1,46 +1,68 @@
 # File Management System with LFSR Encryption
 
-This repository contains a Java-based **File Management System** developed as a class project for an **Operating Systems course**. The system includes standard file management functions as well as a unique feature: **LFSR-based encryption** for text files. This project was managed and primarily developed by me, with additional functions and bug fixes contributed by teammates.
+This is a Java-based **Cross-Platform File Management System** that provides basic file operations and **LFSR encryption** for text files. It operates through a console menu and gives immediate feedback for each command.
 
 ## Features
 
-- **File Management**: Basic file operations like creating, deleting, and managing files.
-- **LFSR Encryption**: Uses a Linear Feedback Shift Register (LFSR) encryption mechanism to secure text files.
-- **Cross-Platform**: Built for **Windows**.
+- **Basic File Operations**: Create, read, update, delete, and copy files.
+- **Directory Management**: Create, delete, navigate, and check directories.
+- **Encryption**: Encrypt and decrypt text files using LFSR encryption.
+- **Cross-Platform**: Built for **Windows** but also works on **macOS**.
 
 ## Project Structure
 
 - **`encryptor.java`**: Contains the encryption and decryption functionalities based on LFSR.
 - **`FileManagementSystem.java`**: Implements the file management operations and program flow for handling files.
 
-## Getting Started
+## How to Run
 
-### Prerequisites
-
-- **Java Development Kit (JDK)** installed (version 8 or higher recommended).
-- **Windows Operating System** (Optimized for Windows but may work with minor adjustments on other OSs).
-
-### Running the Project
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/FileManagementSystem.git
-   cd FileManagementSystem
-   ```
-
-2. **Compile the Java Files**:
+1. **Download the files** and place them in a single directory.
+2. **Open a terminal** in the directory containing the downloaded files.
+3. **Compile the Java files**:
    ```bash
    javac FileManagementSystem.java encryptor.java
    ```
-
-3. **Run the Main Program**:
+4. **Run the main program**:
    ```bash
    java FileManagementSystem
    ```
 
-   This will launch the File Management System, allowing you to perform file operations and encrypt text files using the LFSR encryption function.
+This will open an interactive menu in the terminal.
 
-## Credits
+## Usage
 
-- **Project Management and Code Base**: Majority developed by me.
-- **Additional Contributions**: Teammates provided function implementations and bug fixes.
+After launching, you’ll see a menu with numbered options for different file operations. Choose an action by entering the corresponding number:
+
+```
+File Management System
+ 1. Create a file
+ 2. Read a file
+ 3. Update a file
+ 4. Delete a file
+ 5. Create a directory
+ 6. Delete a directory
+ 7. Check directory
+ 8. Search for files path
+ 9. File Details
+10. Change Permissions
+11. Copy File
+12. Paste File
+13. Encrypt/Decrypt File
+14. Change Directory
+15. Go to Parent Directory
+16. Exit
+```
+
+### Example Usage
+
+- **File Operations**: For actions like `Read a file` or `Encrypt/Decrypt File`, simply enter the file name (e.g., `file.txt`) if the file is in the current directory.
+- **Directory Operations**: To change directories, use `Change Directory` and specify the path relative to the current directory.
+
+## Limitations
+
+- **Direct Visibility**: The system can only act on files and directories it can directly see. This means:
+  - If a file is in the current directory, you can simply provide its name (e.g., `file.txt`).
+  - If the file is in another directory, navigate there first using a combination of the `Change Directory` and the `Go to Parent Directory` options.
+- **Cross-Platform Input**: For cross-platform compatibility, inputs are limited to **file names only** (e.g., `file.txt`). Full file paths may not work consistently across operating systems.
+- **Compatibility**: Works on **Windows** and **macOS**. Ensure paths are correctly formatted for the OS in use.
+- **Encryption Scope**: Only applies to text files.
