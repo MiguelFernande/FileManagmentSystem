@@ -12,7 +12,6 @@ public class FileManagementSystem {
     private static String copiedFilePath = null;
 
     public static void main(String[] args) {
-        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         File d1 = new File(System.getProperty("user.dir"));
         String baseDirectory = d1.toString() + "\\";
@@ -121,6 +120,7 @@ public class FileManagementSystem {
                         break;
                     case 16:
                         System.out.println("Exiting...");
+                        scanner.close();
                         System.exit(0);
                     default:
                         System.out.println("Invalid choice. Please try again.");
